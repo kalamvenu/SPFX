@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spfx-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/spfx/SpfxWebPart.js",
+          "manifest": "./src/webparts/spfx/SpfxWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+    
+    "jquery": {
+      "path": "node_modules/jquery/dist/jquery.min.js",
+       "globalName": "jquery"
+       },
+      //  "bootstrap": {
+      //   "path": "node_modules/bootstrap/dist/js/bootstrap.min.js",
+      //   "globalName": "bootstrap",
+      //   "globalDependencies": ["jquery"]
+      //   } 
+
+        "bootstrap": {
+          "path": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+          "globalName": "bootstrap",
+          "globalDependencies": ["jquery"]
+          } 
+    
+  },
+  "localizedResources": {
+    "SpfxWebPartStrings": "lib/webparts/spfx/loc/{locale}.js"
+  }
+}
