@@ -1,0 +1,76 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spfx-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/spfx/SpfxWebPart.js",
+          "manifest": "./src/webparts/spfx/SpfxWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {
+
+    "sp-client-custom-fields": "node_modules/sp-client-custom-fields/dist/sp-client-custom-fields.bundle.js",
+    
+    "jquery": {
+      "path": "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+      "globalName": "jquery"
+    },
+    "bootstrap": {
+      "path": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+      "globalName": "bootstrap",
+      "globalDependencies": ["jquery"]
+    },
+
+    // "myscript": {
+    //   "path": "https://canvasjs.com/assets/script/jquery-1.11.1.min.js",
+    //   "globalName": "myscript"
+      
+    // },
+
+    // "myscript2": {
+    //   "path": "https://canvasjs.com/assets/script/jquery.canvasjs.min.js",
+    //   "globalName": "myscript2"
+      
+    // },
+
+    "myscript3": {
+      "path":   "https://www.gstatic.com/charts/loader.js",
+      "globalName": "myscript3"
+      
+    },
+    
+    "chartjs": {
+      "path":   "https://cdnjs.com/libraries/Chart.js",
+      "globalName": "chartjs"
+      
+    }
+    
+  
+
+
+    // "jquery": {
+    //   "path": "node_modules/jquery/dist/jquery.min.js",
+    //    "globalName": "jquery"
+    //    },
+    //   //  "bootstrap": {
+    //   //   "path": "node_modules/bootstrap/dist/js/bootstrap.min.js",
+    //   //   "globalName": "bootstrap",
+    //   //   "globalDependencies": ["jquery"]
+    //   //   } 
+
+    //     "bootstrap": {
+    //       "path": "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js",
+    //       "globalName": "bootstrap",
+    //       "globalDependencies": ["jquery"]
+    //       } 
+    
+  },
+  "localizedResources": {
+    "SpfxWebPartStrings": "lib/webparts/spfx/loc/{locale}.js",
+    "sp-client-custom-fields/strings": "../node_modules/sp-client-custom-fields/lib/loc/{locale}.js"
+  }
+}

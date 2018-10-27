@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "ba70c6c5-e7aa-48ad-9a42-41bbeaa8169a",
+  "alias": "SpfxWebPart",
+  "componentType": "WebPart",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other" },
+    "title": { "default": "SPFX" },
+    "description": { "default": "Pie Chart" },
+    "officeFabricIconFontName": "PieDouble",
+    "properties": {
+      "responsive": false,
+      "dimension": {
+        "width": "400px",
+        "height": "400px"
+      },
+      "cutoutPercentage": 0,
+      "animateRotate": true,
+      "animateScale": false,
+      "position": "top",
+      "title": "Colors Pie",
+      "titleEnable": true,
+      "titleColor": "#666",
+      "titleSize": "12px",
+      "legendEnable": true,
+      "legendPosition": "top",
+      "legendColor": "#666",
+      "legendSize": "12px",
+
+      "items": [
+        { "Label": "Red", "Value": 300, "Color": "#FF6384", "Hover Color": "#FF6384"},
+        { "Label": "Blue", "Value": 50, "Color": "#36A2EB", "Hover Color": "#36A2EB"},
+        { "Label": "Yellow", "Value": 100, "Color": "#FFCE56", "Hover Color": "#FFCE56"}
+      ]
+    }
+  }]
+}
